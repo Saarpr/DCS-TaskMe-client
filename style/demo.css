@@ -94,6 +94,8 @@ ol.linenums {
 }
 .container {
   width: 970px !important;
+  background-color: lightgray;
+  min-height: 1000px;
 }
 .demo-headline {
   padding: 73px 0 110px;
@@ -349,3 +351,14 @@ ol.linenums {
   width: 140px;
   margin-left: 20px;
 }
+
+#signInBtn {
+  position: absolute;
+  right: 10px;
+}
+
+#tasks-box{
+  display: flex;
+  justify-content: center;
+}
+
