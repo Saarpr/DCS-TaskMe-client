@@ -95,7 +95,8 @@ ol.linenums {
 .container {
   width: 970px !important;
   background-color: lightgray;
-  min-height: 1000px;
+  min-height: 950px;
+  padding: 0px;
 }
 .demo-headline {
   padding: 73px 0 110px;
@@ -146,6 +147,9 @@ ol.linenums {
   float: none;
   width: auto;
   clear: both;
+}
+blockquote {
+  margin: 20px;
 }
 .demo-row.typography-row .demo-type-example {
   padding-left: 25%;
@@ -362,3 +366,59 @@ ol.linenums {
   justify-content: center;
 }
 
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#subTitle {
+  font-size: 25px;
+  text-align: center;
+}
+
+#comments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 30px;
+  margin-bottom: 50px;
+}
+
+#wlecome_img {
+  width: 100%;
+  max-height: 350px;
+}
+
+#welcome-title{
+  margin-bottom: 50px;
+}
+
+
+.task-card {
+  margin-top: 100px;
+  height: 700px;
+  width: 500px;
+  background-color: white;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+#card-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#card-content > div {
+  margin-top: 25px;
+}
+
+#card {
+  margin-top: 75px;
+}
