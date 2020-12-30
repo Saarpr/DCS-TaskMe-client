@@ -382,7 +382,7 @@ $.widget = function( name, base, prototype ) {
 			this._createWidget( options, element );
 		}
 	};
-	// extend with the existing constructor to carry over any static properties
+	// extend with the existing constructor to carry over any public properties
 	$.extend( constructor, existingConstructor, {
 		version: prototype.version,
 		// copy the object used to create the prototype in case we need to
@@ -5487,7 +5487,7 @@ var Dropdown = function ($$$1) {
     DROPLEFT: 'dropleft',
     MENURIGHT: 'dropdown-menu-right',
     MENULEFT: 'dropdown-menu-left',
-    POSITION_STATIC: 'position-static'
+    POSITION_STATIC: 'position-public'
   };
   var Selector = {
     DATA_TOGGLE: '[data-toggle="dropdown"]',
@@ -5581,7 +5581,7 @@ var Dropdown = function ($$$1) {
           if ($$$1(this._menu).hasClass(ClassName.MENULEFT) || $$$1(this._menu).hasClass(ClassName.MENURIGHT)) {
             element = parent;
           }
-        } // If boundary is not `scrollParent`, then set position to `static`
+        } // If boundary is not `scrollParent`, then set position to `public`
         // to allow the menu to "escape" the scroll parent's boundaries
         // https://github.com/twbs/bootstrap/issues/24251
 
@@ -12448,7 +12448,7 @@ the specific language governing permissions and limitations under the Apache Lic
             //console.log("below/ droptop:", dropTop, "dropHeight", dropHeight, "sum", (dropTop+dropHeight)+" viewport bottom", viewportBottom, "enough?", enoughRoomBelow);
             //console.log("above/ offset.top", offset.top, "dropHeight", dropHeight, "top", (offset.top-dropHeight), "scrollTop", this.body.scrollTop(), "enough?", enoughRoomAbove);
 
-            // fix positioning when body has an offset and is not position: static
+            // fix positioning when body has an offset and is not position: public
             if (this.body.css('position') !== 'static') {
                 bodyOffset = this.body.offset();
                 dropTop -= bodyOffset.top;
@@ -15574,7 +15574,7 @@ the specific language governing permissions and limitations under the Apache Lic
 
 
 	/**
-	 * Take the column definitions and static columns arrays and calculate how
+	 * Take the column definitions and public columns arrays and calculate how
 	 * they relate to column indexes. The callback function will then apply the
 	 * definition found for a column to a suitable configuration object.
 	 *  @param {object} oSettings dataTables settings object
@@ -19075,7 +19075,7 @@ the specific language governing permissions and limitations under the Apache Lic
 	 */
 	function _fnScrollBarWidth ()
 	{
-		// On first run a static variable is set, since this is only needed once.
+		// On first run a public variable is set, since this is only needed once.
 		// Subsequent runs will just use the previously calculated value
 		if ( ! DataTable.__scrollbarWidth ) {
 			var inner = $('<p/>').css( {
@@ -21658,7 +21658,7 @@ the specific language governing permissions and limitations under the Apache Lic
 
 	_Api.extend = function ( scope, obj, ext )
 	{
-		// Only extend API instances and static properties of the API
+		// Only extend API instances and public properties of the API
 		if ( ! obj || ( ! (obj instanceof _Api) && ! obj.__dt_wrapper ) ) {
 			return;
 		}
@@ -23458,7 +23458,7 @@ the specific language governing permissions and limitations under the Apache Lic
 	 *  @returns {boolean} true if this version of DataTables is greater or equal to
 	 *    the required version, or false if this version of DataTales is not
 	 *    suitable
-	 *  @static
+	 *  @public
 	 *  @dtopt API-Static
 	 *
 	 *  @example
@@ -23494,7 +23494,7 @@ the specific language governing permissions and limitations under the Apache Lic
 	 *      selector for the table to test. Note that if more than more than one
 	 *      table is passed on, only the first will be checked
 	 *  @returns {boolean} true the table given is a DataTable, or false otherwise
-	 *  @static
+	 *  @public
 	 *  @dtopt API-Static
 	 *
 	 *  @example
@@ -23525,7 +23525,7 @@ the specific language governing permissions and limitations under the Apache Lic
 	 *    or visible tables only.
 	 *  @returns {array} Array of `table` nodes (not DataTable instances) which are
 	 *    DataTables
-	 *  @static
+	 *  @public
 	 *  @dtopt API-Static
 	 *
 	 *  @example
@@ -25551,7 +25551,7 @@ the specific language governing permissions and limitations under the Apache Lic
 		/**
 		 * Classes that DataTables assigns to the various components and features
 		 * that it adds to the HTML table. This allows classes to be configured
-		 * during initialisation in addition to through the static
+		 * during initialisation in addition to through the public
 		 * {@link DataTable.ext.oStdClasses} object).
 		 *  @namespace
 		 *  @name DataTable.defaults.classes
@@ -28345,7 +28345,7 @@ the specific language governing permissions and limitations under the Apache Lic
 		 *
 		 * This type of ordering is useful if you want to do ordering based on data
 		 * live from the DOM (for example the contents of an 'input' element) rather
-		 * than just the static string that DataTables knows of.
+		 * than just the public string that DataTables knows of.
 		 *
 		 * The way these plug-ins work is that you create an array of the values you
 		 * wish to be ordering for the column in question and then return that
