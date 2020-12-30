@@ -32,14 +32,14 @@
         <a class="navbar-brand" href="#">TaskMe</a>
 
 
-            <img id="profilePic" src="./images/task-management.png" alt="profilePic">
+        <img id="profilePic" src="./images/task-management.png" alt="profilePic">
 
         <!-- ////////////////////////// -->
-        <button id = "signInBtn" class="btn btn-embossed btn-primary">
+        <button id="signInBtn" class="btn btn-embossed btn-primary">
             Logout
-          </button>
+        </button>
         <!-- ////////////////////////// -->
-        
+
 
     </nav>
     <div class="container">
@@ -50,8 +50,19 @@
             <div class="col-4">
                 <div class="todo">
                     <ul>
-                        <li class="todo-done">
-                            <div class="todo-icon fui-user"></div>
+                        <li>
+                            <div class="todo-content">
+                                <h4 class="todo-name">
+                                    Meet <strong>Adrian</strong> at <strong>6pm</strong>
+                                </h4>
+                                Times Square
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="todo">
+                    <ul>
+                        <li>
                             <div class="todo-content">
                                 <h4 class="todo-name">
                                     Meet <strong>Adrian</strong> at <strong>6pm</strong>
@@ -63,7 +74,12 @@
                 </div>
             </div>
         </div>
-        
+        <div id="buttons">
+            <button class="btn btn-success">Add</button>
+            <button class="btn btn-warning">Update</button>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+
     </div>
 </body>
 <footer>
@@ -72,6 +88,3 @@
 <script src="js/timer.js"></script>
 
 </html>
-
-
-
