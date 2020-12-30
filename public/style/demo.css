@@ -361,6 +361,14 @@ blockquote {
   right: 10px;
 }
 
+#profilePic{
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  right: 90px;
+  border-radius: 3px;
+}
+
 #tasks-box{
   display: flex;
   justify-content: center;
