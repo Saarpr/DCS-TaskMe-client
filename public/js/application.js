@@ -197,33 +197,14 @@ String.prototype.repeat = function (num) {
     }
 
     // Todo list
-    $('.todo li').click(function () {
-      $(this).toggleClass('todo-done');      
+    $('.todo').on('click', 'li', function () {
+      $('.todo-done').addClass('todo-content').removeClass('todo-done');
+      $(this).toggleClass('todo-done');
     });
-
-
-    
-
-
 
     // make code pretty
     window.prettyPrint && prettyPrint();
 
-    // fix dropdown in pagination on mobile
-    // $(window).resize(function () {
-    //   $('.pagination ul').each(function () {
-    //     var $parent = $(this);
-    //     $parent.find('.pagination-dropdown').each(function () {
-    //       var $this = $(this);
-    //       //console.log($parent.get(0).scrollWidth + " " + $parent.innerWidth() );
-    //       if ($parent.get(0).scrollWidth > $parent.innerWidth()) {
-    //         $this.addClass('place-in-row');
-    //       } else {
-    //         $this.removeClass('place-in-row');
-    //       }
-    //     });
-    //   });
-    // }).trigger('resize');
   });
 }(jQuery));
 
